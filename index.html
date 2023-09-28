@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="https://i.pinimg.com/originals/e4/54/f2/e454f2a7aaafd52651be5a3bc74ae991.png">
 </head>
-<body class="d-flex flex-column min-vh-100 bg-secondary">
+<body class="d-flex flex-column min-vh-100 bg-tertiary">
 
     <!-- MAIN -->
-    <div class="container pt-5 mt-3 text-center text-white">
-        <h1 class="fw-bold " >🔢Number Guessing Game🔢</h1>
-        <small><p class="mb-5 pb-2">Test your luck with this game!</p></small>
+    <div class="container pt-5 mt-3 text-center" >
+        <h1 class="fw-bold " >Number Guessing Game</h1>
+        <small><p class="mb-5 pb-2">Feeling lucky? Try this game!</p></small>
         
-        <div class="card shadow-lg p-4 bg-dark border border-1 text-white">
-            <span><button onclick="toggleAudio()" class="col-1 float-end btn btn-dark" id="soundEmoji">🔈</button></span>
+        <div class="card shadow-lg p-4 bg-dark border border-1 text-white" >
+            <span><button class="col-1 float-start btn btn-dark btn-sm" id="aboutBtn">❓</button><button onclick="toggleAudio()" class="col-1 float-end btn btn-dark btn-sm" id="soundEmoji">🔈</button></span>
             <div class="card-body">
                 <h1 class="fw-bold pb-3">Guess a number between 1 - 100</h1><hr>
                 <h1 class="fw-bold" id="message"></h1>
@@ -32,11 +32,11 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body p-5 text-center">
-                    <h1 class="fw-bold" id="test">Congratulations!</h1>
+                    <h1 class="fw-bold" id="test">CONGRATULATIONS!</h1>
                     <p id="message">You guess the right number.</p>
                     <div class="display-2">🎊</div>
                     <h1 class="display-1 mt-2 fw-bold" id="correctNumber"></h1>
-                    <a href="index.html"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Guess Again</button></a>
+                    <a href="index.html"><button type="button" class="btn btn-success" data-bs-dismiss="modal">Guess Again</button></a>
                 </div>
             </div>
         </div>
@@ -47,10 +47,10 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body p-5 text-center">
-                    <h1 class="fw-bold">Too High</h1>
-                    <h1 class="display-1 mt-5" id="emoji">😁</h1>
+                    <h1 class="fw-bold">TOO HIGH</h1>
+                    <h1 class="display-1" id="emoji">🧐</h1>
                     <p id="message">Please try again</p>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -61,10 +61,10 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body p-5 text-center">
-                    <h1 class="fw-bold">Too Low</h1>
-                    <h1 class="display-1 mt-5" id="emoji">😒</h1>
+                    <h1 class="fw-bold">TOO LOW</h1>
+                    <h1 class="display-1" id="emoji">🧐</h1>
                     <p id="message">Please try again</p>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -75,10 +75,10 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body p-5 text-center">
-                    <h1 class="fw-bold">Game Over</h1>
-                    <h1 class="display-1 mt-5" id="emoji">😰</h1>
+                    <h1 class="fw-bold">GAME OVER!</h1>
+                    <h1 class="display-1" id="emoji">😵</h1>
                     <p id="message">You've reached 10 guesses.</p>
-                    <a href="index.html"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Try Again</button></a>
+                    <a href="index.html"><button type="button" class="btn btn-success" data-bs-dismiss="modal">Try Again</button></a>
                 </div>
             </div>
         </div>
@@ -90,9 +90,24 @@
             <div class="modal-content">
                 <div class="modal-body p-5 text-center">
                     <h1 class="fw-bold">Invalid Input</h1>
-                    <h1 class="display-1 mt-5" id="emoji">😡</h1>
+                    <h1 class="display-1" id="emoji">😡</h1>
                     <p id="message">Please enter a number between 1 - 100</p>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ABOUT MESSAGE MODAL -->
+    <div class="modal fade" id="aboutModal" data-bs-backdrop="static" data-bs-keyboard="false" >
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body p-5 text-center">
+                    <h1 class="fw-bold">About Game</h1>
+                    <div class="display-2">🎮</div>
+                    <small><p class="pt-3">Guess the mystery number between 1 and 100! Test your luck and intuition in this exciting number guessing game.</p></small>
+                    <small><p><i><strong>Note: Enter a number between 1 to 100 only!</strong> </i></p></small>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" >Close</button>
                 </div>
             </div>
         </div>
