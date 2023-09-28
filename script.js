@@ -2,11 +2,25 @@ let guessBtn = document.querySelector('#guessBtn');
 let number = [Math.floor(Math.random() * 100)]
 let message = document.querySelector('#message');
 
-let bgMusic = document.querySelector('#bgMusic');
 let bgmVictory = document.querySelector('#victory');
 let bgmGameOver = document.querySelector('#gameover');
 
 let guessCount = 10; // guess counter
+
+
+const audio = document.querySelector('#bgMusic');
+
+function toggleAudio() {
+    if (audio.muted) {
+        audio.muted = false;
+        audio.play();
+        document.querySelector('#soundEmoji').innerHTML = '🔊';
+    } else {
+        audio.muted = true;
+        audio.pause();
+        document.querySelector('#soundEmoji').innerHTML = '🔇';
+    }
+}
 
 
 guessBtn.addEventListener('click', () => {
@@ -16,6 +30,7 @@ guessBtn.addEventListener('click', () => {
     const messageModal2 = new bootstrap.Modal(document.getElementById('messageModal2'))
     const gameOverModal = new bootstrap.Modal(document.getElementById('gameOverModal'))
     const invalidModal = new bootstrap.Modal(document.getElementById('invalidModal'))
+
     
     //user input number
     let input = parseFloat(document.querySelector('#userInput').value); 

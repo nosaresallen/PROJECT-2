@@ -10,18 +10,18 @@
 </head>
 <body class="d-flex flex-column min-vh-100 bg-secondary">
 
-
     <!-- MAIN -->
     <div class="container pt-5 mt-3 text-center text-white">
         <h1 class="fw-bold " >🔢Number Guessing Game🔢</h1>
         <small><p class="mb-5 pb-2">Test your luck with this game!</p></small>
         
         <div class="card shadow-lg p-4 bg-dark border border-1 text-white">
+            <span><button onclick="toggleAudio()" class="col-1 float-end btn btn-dark" id="soundEmoji">🔈</button></span>
             <div class="card-body">
-                <h1 class="fw-bold">Guess a number between 1 - 100</h1><hr>
+                <h1 class="fw-bold pb-3">Guess a number between 1 - 100</h1><hr>
                 <h1 class="fw-bold" id="message"></h1>
                 <p>Guess Remaining: <span class="badge bg-dark text-white" id="guessCount">10</span></p>
-                <input class="w-25 p-4 text-center fs-1 fw-bold" type="number" name="" min="0" max="100" id="userInput" ><br>
+                <input class="w-25  text-center fs-1 fw-bold" type="number" name="" min="0" max="100" id="userInput" ><br>
                 <button class="btn btn-secondary mt-2" id="guessBtn">Guess</button>
             </div>
         </div>
@@ -98,7 +98,9 @@
         </div>
     </div>
 
-    <audio id="bgMusic" src="audio/bg-music.mp3" loop autoplay></audio>
+    <!-- AUDIOS -->
+
+    <audio id="bgMusic" src="audio/bg-music.mp3" loop></audio>
     <audio id="victory" src="audio/bg-victory.mp3"></audio>
     <audio id="gameover" src="audio/bg-gameover.mp3"></audio>
 
