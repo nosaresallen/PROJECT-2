@@ -7,8 +7,6 @@ let bgmGameOver = document.querySelector('#gameover');
 
 let guessCount = 10; // guess counter
 
-
-
 //backgorund music
 const audio = document.querySelector('#bgMusic');
 function toggleAudio() {
@@ -22,8 +20,6 @@ function toggleAudio() {
         document.querySelector('#soundEmoji').innerHTML = '🔇';
     }
 }
-
-
 
 
 guessBtn.addEventListener('click', () => {
@@ -76,7 +72,6 @@ guessBtn.addEventListener('click', () => {
     
     updateGuess(); //updating a guess counter
 });
-
 
 
 //about game modal --to display
