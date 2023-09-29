@@ -1,5 +1,5 @@
 let guessBtn = document.querySelector('#guessBtn'); 
-let number = [Math.floor(Math.random() * 100)]
+let number = [Math.floor(Math.random() * 3)]
 let message = document.querySelector('#message');
 
 let bgmVictory = document.querySelector('#victory');
