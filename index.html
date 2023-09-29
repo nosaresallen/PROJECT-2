@@ -7,26 +7,44 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="https://i.pinimg.com/originals/e4/54/f2/e454f2a7aaafd52651be5a3bc74ae991.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=League+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="d-flex flex-column min-vh-100 bg-tertiary">
-
-    <!-- MAIN -->
-    <div class="container pt-5 mt-3 text-center" >
-        <h1 class="fw-bold " >Number Guessing Game</h1>
-        <small><p class="mb-5 pb-2">Feeling lucky? Try this game!</p></small>
+<body class="area d-flex flex-column min-vh-100 bg-tertiary">
+    <!-- BACKGROUND ANIMATION -->
+    <span><ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li></ul>
+    </span>
         
-        <div class="card shadow-lg p-4 bg-dark border border-1 text-white" >
-            <span><button class="col-1 float-start btn btn-dark btn-sm" id="aboutBtn">❓</button><button onclick="toggleAudio()" class="col-1 float-end btn btn-dark btn-sm" id="soundEmoji">🎵</button></span>
+    <!-- MAIN -->
+    <main class="container pt-5 mt-3 text-center text-white" >
+        <h1 class="title fw-bold " >NUMBER GUESSING GAME</h1>
+        <small><p class="descrip mb-2 pb-2">Feeling lucky? Try this game!</p></small>
+        <h1><img src="image/finding.gif" alt=""></h1>
+        
+        <div class="card shadow-lg p-4 text-white" >
+            <span><h4 class="descfw-bold text-white float-start" >Lvl 1</h4><button class="col-1 float-end btn btn-sm fa fa-gamepad" style="font-size:25px;color:white;" id="aboutBtn"></button></span>
             <div class="card-body">
-                <h1 class="fw-bold pb-3">Guess a number between 1 - 100</h1>
-                <h4 class="fw-bold text-success">Level 1</h4><hr>
+                <h1 class="title2 fw-bold pb-3">Guess a number between 1 - 100</h1>
+                <hr>
                 <h1 class="fw-bold" id="message"></h1>
-                <p>Guess Remaining: <span class="badge bg-dark text-white" id="guessCount">10</span></p>
+                <small><p class="descrip">You have <span class="badge bg-white text-dark fw-bold" id="guessCount">10</span> attempts to guess the hidden number:</p></small>
                 <input class="w-25  text-center fs-1 fw-bold" type="number" name="" min="0" max="100" id="userInput" ><br>
-                <button class="btn btn-secondary mt-2" id="guessBtn">Guess</button>
+                <button class="btn btn-success mt-4" id="guessBtn">Guess</button>
             </div>
         </div>
-    </div>
+    </main>
 
     <!-- CONGRATULATION MESSAGE MODAL -->
     <div class="modal fade" id="congratsModal" data-bs-backdrop="static" data-bs-keyboard="false" >
@@ -114,6 +132,7 @@
         </div>
     </div>
 
+
     <!-- AUDIOS -->
 
     <audio id="bgMusic" src="audio/bg-music.mp3" loop></audio>
@@ -122,7 +141,9 @@
 
     
     <!-- FOOTER -->
-    <footer class="text-center bg-dark text-white fs-6 p-3 mt-auto ">Developed by <strong>Allen Nosares</strong></footer>
+    <footer class="text-center bg-black text-white fs-6 p-3 mt-auto ">Developed by <strong>Allen Nosares</strong></footer>
+
+    
     
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
