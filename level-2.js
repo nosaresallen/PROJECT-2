@@ -7,19 +7,17 @@ let bgmGameOver = document.querySelector('#gameover');
 
 let guessCount = 5; // guess counter
 
-//backgorund music
-const audio = document.querySelector('#bgMusic');
-function toggleAudio() {
-    if (audio.muted) {
-        audio.muted = false;
-        audio.play();
-        document.querySelector('#soundEmoji').innerHTML = '🔊';
-    } else {
-        audio.muted = true;
-        audio.pause();
-        document.querySelector('#soundEmoji').innerHTML = '🔇';
+//audio volume decrease
+document.addEventListener("DOMContentLoaded", function() {
+    const audio = document.querySelector('#bgMain');   
+    function setHalfVolume() { 
+        audio.volume = 0.5;
+
     }
-}
+
+    // Call the function to set the initial volume when the page is loaded
+    setHalfVolume();
+});
 
 
 guessBtn.addEventListener('click', () => {
