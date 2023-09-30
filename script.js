@@ -10,14 +10,10 @@ let guessCount = 10; // guess counter
 
 //audio volume decrease
 document.addEventListener("DOMContentLoaded", function() {
-    const audio = document.querySelector('#bgMain');
-    const victory = document.querySelector('#victory');
-    const gameover = document.querySelector('#gamover');
-    
+    const audio = document.querySelector('#bgMain');   
     function setHalfVolume() { 
-        audio.volume = 0.2;
-        victory.volume = 0.2;
-        gameover.volume = 0.2;
+        audio.volume = 0.5;
+
     }
 
     // Call the function to set the initial volume when the page is loaded
