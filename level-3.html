@@ -1,53 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Number Guessing Game - Project 2</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="https://i.pinimg.com/originals/e4/54/f2/e454f2a7aaafd52651be5a3bc74ae991.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=League+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=League+Gothic&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body class="area d-flex flex-column min-vh-100 bg-tertiary">
     <!-- BACKGROUND ANIMATION -->
-    <span><ul class="circles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li></ul>
+    <span>
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
     </span>
-        
+
     <!-- MAIN -->
-    <main class="container pt-5 mt-3 text-center text-white" >
-        <h1 class="title fw-bold " >NUMBER GUESSING GAME</h1>
-        <small><p class="descrip mb-2 pb-2">Feeling lucky? Try this game!</p></small>
+    <main class="container pt-5 mt-3 text-center text-white">
+        <h1 class="title fw-bold ">NUMBER GUESSING GAME</h1>
+        <small>
+            <p class="descrip mb-2 pb-2">Feeling lucky? Try this game!</p>
+        </small>
         <h1><img src="image/finding.gif" alt=""></h1>
-        
-        <div class="card shadow-lg p-4 text-white" >
-            <span><h4 class="descrip text-white float-start" >Lvl 3</h4><button class="col-1 float-end btn btn-sm fa fa-gamepad" style="font-size:25px;color:white;" id="aboutBtn"></button></span>
+
+        <div class="card shadow-lg p-4 text-white">
+            <span>
+                <h4 class="descrip text-white float-start">Lvl 3</h4><button
+                    class="col-1 float-end btn btn-sm fa fa-gamepad" style="font-size:25px;color:white;"
+                    id="aboutBtn"></button>
+            </span>
             <div class="card-body">
                 <h1 class="title2 fw-bold pb-3">Guess a number between 1 - 100</h1>
                 <hr>
                 <h1 class="fw-bold" id="message"></h1>
-                <small><p class="descrip">You have <span class="badge bg-white text-dark fw-bold" id="guessCount">3</span> attempts to guess the hidden number:</p></small>
-                <input class="w-25  text-center fs-1 fw-bold" type="number" name="" min="0" max="100" id="userInput" ><br>
+                <small>
+                    <p class="descrip">You have <span class="badge bg-white text-dark fw-bold" id="guessCount">10</span>
+                        attempts to guess the hidden number:</p>
+                </small>
+                <input class="w-25  text-center fs-1 fw-bold" type="number" name="" min="0" max="100"
+                    id="userInput"><br>
                 <button class="btn btn-success mt-4" id="guessBtn">Guess</button>
             </div>
         </div>
     </main>
 
     <!-- CONGRATULATION MESSAGE MODAL -->
-    <div class="modal fade" id="congratsModal" data-bs-backdrop="static" data-bs-keyboard="false" >
+    <div class="modal fade" id="congratsModal" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body p-5 text-center">
@@ -55,14 +71,15 @@
                     <p id="message">You guess the right number.</p>
                     <div class="display-2">🎊</div>
                     <h1 class="display-1 mt-2 fw-bold" id="correctNumber"></h1>
-                    <a href="level-4.html"><button type="button" class="btn btn-success" data-bs-dismiss="modal">Next Level</button></a>
+                    <a href="level-4.html"><button type="button" class="btn btn-success" data-bs-dismiss="modal">Next
+                            Level</button></a>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- TOO HIGH MESSAGE MODAL -->
-    <div class="modal fade" id="messageModal1" data-bs-backdrop="static" data-bs-keyboard="false" >
+    <div class="modal fade" id="messageModal1" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body p-5 text-center">
@@ -76,7 +93,7 @@
     </div>
 
     <!-- TOO LOW MESSAGE MODAL -->
-    <div class="modal fade" id="messageModal2" data-bs-backdrop="static" data-bs-keyboard="false" >
+    <div class="modal fade" id="messageModal2" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body p-5 text-center">
@@ -90,21 +107,22 @@
     </div>
 
     <!-- GAMEOVER MESSAGE MODAL -->
-    <div class="modal fade" id="gameOverModal" data-bs-backdrop="static" data-bs-keyboard="false" >
+    <div class="modal fade" id="gameOverModal" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body p-5 text-center">
                     <h1 class="fw-bold">GAME OVER!</h1>
                     <h1 class="display-1" id="emoji">😵</h1>
                     <p id="message">You've reached 3 guesses.</p>
-                    <a href="index.html"><button type="button" class="btn btn-success" data-bs-dismiss="modal">Try Again</button></a>
+                    <a href="index.html"><button type="button" class="btn btn-success" data-bs-dismiss="modal">Try
+                            Again</button></a>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- INVALID INPUT MESSAGE MODAL -->
-    <div class="modal fade" id="invalidModal" data-bs-backdrop="static" data-bs-keyboard="false" >
+    <div class="modal fade" id="invalidModal" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body p-5 text-center">
@@ -116,17 +134,22 @@
             </div>
         </div>
     </div>
-    
+
     <!-- ABOUT MESSAGE MODAL -->
-    <div class="modal fade" id="aboutModal" data-bs-backdrop="static" data-bs-keyboard="false" >
+    <div class="modal fade" id="aboutModal" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body p-5 text-center">
                     <h1 class="fw-bold">About Game</h1>
                     <div class="display-2">🎮</div>
-                    <small><p class="pt-3">Guess the mystery number between 1 and 100! Test your luck and intuition in this exciting number guessing game.</p></small>
-                    <small><p><i><strong>Note: Enter a number between 1 to 100 only!</strong> </i></p></small>
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" >Close</button>
+                    <small>
+                        <p class="pt-3">Guess the mystery number between 1 and 100! Test your luck and intuition in this
+                            exciting number guessing game.</p>
+                    </small>
+                    <small>
+                        <p><i><strong>Note: Enter a number between 1 to 100 only!</strong> </i></p>
+                    </small>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -138,11 +161,15 @@
     <audio id="victory" src="audio/bg-victory.mp3"></audio>
     <audio id="gameover" src="audio/bg-gameover.mp3"></audio>
 
-    
+
     <!-- FOOTER -->
-    <footer class="text-center bg-black text-white fs-6 p-3 mt-auto ">Developed by <strong>Allen Nosares</strong></footer>
-    
+    <footer class="text-center bg-black text-white fs-6 p-3 mt-auto ">Developed by <strong>Allen Nosares</strong>
+    </footer>
+
     <script src="level-3.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

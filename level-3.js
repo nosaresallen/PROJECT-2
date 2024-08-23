@@ -5,7 +5,7 @@ let message = document.querySelector('#message');
 let bgmVictory = document.querySelector('#victory');
 let bgmGameOver = document.querySelector('#gameover');
 
-let guessCount = 3; // guess counter
+let guessCount = 10; // guess counter
 
 //audio volume decrease
 document.addEventListener("DOMContentLoaded", function() {

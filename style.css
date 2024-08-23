@@ -167,6 +167,10 @@ input[type=number] {
     animation-duration: 11s;
 }
 
+li {
+    color: white;
+    font-size: 15px;
+}
 
 
 @keyframes animate {
